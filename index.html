@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Gửi ẻm của anh</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ff9999;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #333;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 153, 153, 0.2);
+        }
+        h1 { font-size: 2em; margin-bottom: 10px; }
+        p { color: #ccc; line-height: 1.6; }
+        .heart {
+            font-size: 50px;
+            color: #e74c3c;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .btn {
+            background: #ff9999;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤</div>
+        <h1>Đi làm về mệt không?</h1>
+        <p>Anh biết dạo này em vất vả, lại hay thức khuya.<br>
+        Đừng mải chơi game quá mà quên ngủ sớm nhé.<br>
+        Dù ở lớp mình gặp nhau 4 tiếng vẫn thấy ít,<br>
+        nhưng anh sẽ luôn ở đây cổ vũ em!</p>
+        <a href="#" class="btn" onclick="alert('Mai lên lớp anh mua bánh cho ăn nhé!')">Nhấn vào đây để nhận quà</a>
+    </div>
+</body>
+</html>
