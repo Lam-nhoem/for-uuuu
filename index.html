@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -18,12 +19,13 @@
         .container {
             text-align: center;
             border: 1px solid #333;
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 0 0 20px rgba(255, 153, 153, 0.2);
+            max-width: 80%;
         }
-        h1 { font-size: 2em; margin-bottom: 10px; }
-        p { color: #ccc; line-height: 1.6; }
+        h1 { font-size: 1.8em; margin-bottom: 10px; }
+        p { color: #ccc; line-height: 1.6; font-size: 1.1em; }
         .heart {
             font-size: 50px;
             color: #e74c3c;
@@ -43,6 +45,16 @@
             font-weight: bold;
             display: inline-block;
             margin-top: 20px;
+            cursor: pointer;
+            border: none;
+        }
+        #clock {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ffeb3b;
+            padding: 10px;
+            border-top: 1px dashed #555;
         }
     </style>
 </head>
@@ -51,29 +63,34 @@
         <div class="heart">❤</div>
         <h1>Đi làm về mệt không?</h1>
         <p>Dạo này Lâm thấy em làm thêm nên về khuya.<br>
-        Nên là nhớ giữ gìn sức khỏe, tói về iu đừng coo chơi gêm.<br>
-        Nhớ ăn uống đầy đủ, Lam chúc yêu valentine năm nay hoc gioi, luôn zui zẻ, mãi xinh gái như ngày hnay<br>
-        Tùn Lam yeu em!</p>
-        <div id="clock" style="font-size: 1.2em; font-weight: bold; margin-top: 15px; color: #ffeb3b;"></div>
-
-<script>
-    function countDays() {
-        const startDate = new Date("2025-12-18"); // Thay ngày hai bạn bắt đầu yêu nhau vào đây (định dạng YYYY-MM-DD)
-        const now = new Date();
-        const diff = now - startDate;
+        Nhớ giữ gìn sức khỏe, tối về đừng có chơi game muộn nhé.<br>
+        Ăn uống đầy đủ nha. Chúc yêu Valentine năm nay học giỏi, luôn vui vẻ, mãi xinh gái như ngày hôm nay.<br>
+        <strong>Tùng Lâm yêu em!</strong></p>
         
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        <button class="btn" onclick="alert('Mai lên lớp Lâm mua bánh cho ăn nhó!')">Daa &lt;3</button>
 
-        document.getElementById("clock").innerHTML = 
-            "Chúng mình đã bên nhau: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
-    }
-    setInterval(countDays, 1000);
-</script>
-        <a href="#" class="btn" onclick="alert('Mai lên lớp Lâm mua bánh co ăn nhó!')">Daa <3</a>
+        <div id="clock">Đang tính toán thời gian...</div>
     </div>
+
+    <script>
+        function countDays() {
+            // Ngày kỷ niệm: 18 tháng 12 năm 2025
+            const startDate = new Date("2025-12-18T00:00:00"); 
+            const now = new Date();
+            const diff = now - startDate;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("clock").innerHTML = 
+                "Chúng mình đã bên nhau: <br>" + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
+        }
+        
+        // Chạy ngay lập tức và sau đó mỗi giây cập nhật 1 lần
+        countDays();
+        setInterval(countDays, 1000);
+    </script>
 </body>
 </html>
-
