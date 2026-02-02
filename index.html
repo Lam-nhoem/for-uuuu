@@ -54,7 +54,26 @@
         Nên là nhớ giữ gìn sức khỏe, tói về iu đừng coo chơi gêm.<br>
         Nhớ ăn uống đầy đủ, Lam chúc yêu valentine năm nay hoc gioi, luôn zui zẻ, mãi xinh gái như ngày hnay<br>
         Tùn Lam yeu em!</p>
+        <div id="clock" style="font-size: 1.2em; font-weight: bold; margin-top: 15px; color: #ffeb3b;"></div>
+
+<script>
+    function countDays() {
+        const startDate = new Date("2025-12-18"); // Thay ngày hai bạn bắt đầu yêu nhau vào đây (định dạng YYYY-MM-DD)
+        const now = new Date();
+        const diff = now - startDate;
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("clock").innerHTML = 
+            "Chúng mình đã bên nhau: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
+    }
+    setInterval(countDays, 1000);
+</script>
         <a href="#" class="btn" onclick="alert('Mai lên lớp Lâm mua bánh co ăn nhó!')">Daa <3</a>
     </div>
 </body>
 </html>
+
